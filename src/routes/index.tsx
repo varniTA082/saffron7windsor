@@ -238,17 +238,36 @@ function Experience() {
           <p className="uppercase tracking-[0.3em] text-xs text-muted-foreground mb-6">
             Order in with
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {["Uber Eats", "SkipTheDishes", "DoorDash"].map((p) => (
-              <span
-                key={p}
-                className="px-6 py-3 rounded-full bg-card border border-gold/40 font-display text-xl text-saffron"
-              >
-                {p}
-              </span>
-            ))}
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <a
+              href="#"
+              aria-label="Order on Uber Eats"
+              className="px-7 py-4 rounded-full bg-black hover:opacity-90 transition shadow-soft inline-flex items-center"
+            >
+              <span className="text-white font-bold text-xl tracking-tight">Uber </span>
+              <span className="text-[#06C167] font-bold text-xl tracking-tight">Eats</span>
+            </a>
+            <a
+              href="#"
+              aria-label="Order on SkipTheDishes"
+              className="px-7 py-4 rounded-full bg-[#FF8000] hover:opacity-90 transition shadow-soft inline-flex items-center"
+            >
+              <span className="text-white font-extrabold text-xl tracking-tight italic">Skip</span>
+              <span className="text-white font-light text-xl tracking-tight italic">TheDishes</span>
+            </a>
+            <a
+              href="#"
+              aria-label="Order on DoorDash"
+              className="px-7 py-4 rounded-full bg-[#EB1700] hover:opacity-90 transition shadow-soft inline-flex items-center gap-2"
+            >
+              <svg width="22" height="18" viewBox="0 0 32 26" aria-hidden>
+                <path fill="#fff" d="M30.3 8.5C29 5.7 26.2 4 23.2 4H2c-1 0-1.6 1.2-.9 1.9l3.7 3.7c.7.7 1.6 1.1 2.6 1.1h15.4c1.6 0 3 1.4 2.9 3-.1 1.5-1.4 2.7-2.9 2.7h-9.5c-1 0-1.6 1.2-.9 1.9l3.7 3.7c.7.7 1.6 1.1 2.6 1.1h4.3c5.9 0 10.6-5.8 8.3-12.6z"/>
+              </svg>
+              <span className="text-white font-extrabold text-xl tracking-tight">DOORDASH</span>
+            </a>
           </div>
         </div>
+
       </div>
     </section>
   );
