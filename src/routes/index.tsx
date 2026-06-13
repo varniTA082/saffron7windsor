@@ -23,16 +23,58 @@ export const Route = createFileRoute("/")({
 
 /* ---------------- Components ---------------- */
 
-function Logo({ className = "" }: { className?: string }) {
+function Logo({ className = "", size = "md" }: { className?: string; size?: "sm" | "md" | "lg" | "xl" }) {
+  const sizes = { sm: "h-10", md: "h-14", lg: "h-24", xl: "h-40 md:h-56" };
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <span className="font-display text-2xl md:text-3xl font-bold text-saffron tracking-wide">
-        SAFFRON
-      </span>
-      <span className="font-display text-2xl md:text-3xl font-bold text-saffron">7</span>
+    <div className={`inline-flex flex-col items-center ${className}`}>
+      <svg
+        viewBox="0 0 600 220"
+        className={`${sizes[size]} w-auto`}
+        role="img"
+        aria-label="Saffron 7"
+      >
+        {/* Saffron flame ornament */}
+        <g transform="translate(300 18)">
+          <path
+            d="M0 -8 C -4 0, -10 4, -10 14 C -10 22, -4 28, 0 30 C 4 28, 10 22, 10 14 C 10 4, 4 0, 0 -8 Z"
+            fill="var(--saffron)"
+          />
+          <path d="M0 8 C -3 14, -3 22, 0 28 C 3 22, 3 14, 0 8 Z" fill="var(--gold)" opacity="0.85" />
+          <path d="M0 30 L 0 42" stroke="var(--saffron)" strokeWidth="2.5" strokeLinecap="round" />
+        </g>
+        {/* Wordmark */}
+        <text
+          x="300"
+          y="140"
+          textAnchor="middle"
+          fontFamily="'Cormorant Garamond', serif"
+          fontWeight="700"
+          fontSize="120"
+          letterSpacing="6"
+          fill="var(--saffron)"
+        >
+          SAFFRON 7
+        </text>
+        {/* Cuisine line with flourishes */}
+        <line x1="120" y1="178" x2="170" y2="178" stroke="var(--gold)" strokeWidth="1.2" />
+        <line x1="430" y1="178" x2="480" y2="178" stroke="var(--gold)" strokeWidth="1.2" />
+        <text
+          x="300"
+          y="184"
+          textAnchor="middle"
+          fontFamily="'Cormorant Garamond', serif"
+          fontWeight="600"
+          fontSize="22"
+          letterSpacing="8"
+          fill="var(--forest)"
+        >
+          INDIAN · ITALIAN · FUSION
+        </text>
+      </svg>
     </div>
   );
 }
+
 
 function GoldDivider({ label }: { label?: string }) {
   return (
