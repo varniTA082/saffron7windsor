@@ -437,19 +437,42 @@ function Visit() {
 function Footer() {
   return (
     <footer className="bg-forest text-cream/90 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
         <div>
-          <Logo className="brightness-0 invert opacity-90" />
+          <Logo />
           <p className="text-xs uppercase tracking-[0.3em] text-gold mt-2">
             Indian · Italian · Fusion
           </p>
+          <p className="text-sm text-cream/70 mt-3 leading-relaxed">
+            1457 University Ave West, Unit C<br />Windsor, ON · N9B 1B8
+          </p>
         </div>
-        <p className="font-script text-xl text-gold">
-          Flavours without borders.
-        </p>
-        <p className="text-xs text-cream/60">
-          © {new Date().getFullYear()} Saffron 7 · Windsor, Ontario
-        </p>
+        <div className="text-center">
+          <p className="font-script text-2xl text-gold">Flavours without borders.</p>
+        </div>
+        <div className="flex md:justify-end gap-3">
+          <a
+            href="https://instagram.com/Saffron7Windsor"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram @Saffron7Windsor"
+            className="w-11 h-11 rounded-full border border-gold/60 text-gold flex items-center justify-center hover:bg-gold/20 transition"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a
+            href="https://facebook.com/Saffron7Windsor"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook Saffron7Windsor"
+            className="w-11 h-11 rounded-full border border-gold/60 text-gold flex items-center justify-center hover:bg-gold/20 transition"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.4-2 2-2h2V2c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V10H6v4h3v8h4z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-gold/20 text-xs text-cream/60 text-center">
+        © {new Date().getFullYear()} Saffron 7 · Windsor, Ontario
       </div>
     </footer>
   );
