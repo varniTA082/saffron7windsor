@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroSpread from "@/assets/hero-spread.jpg";
 import dishIndian from "@/assets/dish-indian.jpg";
-import dishItalian from "@/assets/dish-italian.jpg";
+import dishItalian from "@/assets/dish-rose-pasta.jpg";
 import dishFusion from "@/assets/dish-fusion.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
 import saffronLogo from "@/assets/saffron7-logo.jpeg.asset.json";
@@ -179,8 +179,8 @@ function Story() {
 
 const dishes = [
   { img: dishIndian, name: "Butter Chicken", cuisine: "Indian Classic", note: "Slow-simmered tomato cream, kissed with kasuri methi." },
-  { img: dishItalian, name: "Truffle Fettuccine", cuisine: "Italian Soul", note: "House-pulled pasta in white truffle cream." },
-  { img: dishFusion, name: "Tikka Paneer Skewers", cuisine: "The Fusion", note: "Charred paneer on banana leaf, basil-mint chutney." },
+  { img: dishItalian, name: "Spicy Rose Pasta", cuisine: "Italian Soul", note: "Penne in a creamy tomato rose sauce with a chili kick." },
+  { img: dishFusion, name: "Paneer Tikka Skewers", cuisine: "The Fusion", note: "Charred paneer on banana leaf, basil-mint chutney." },
   { img: dishDessert, name: "Cocoa Tiramisu", cuisine: "Dolce", note: "Espresso-soaked sponge, mascarpone, dark cocoa rain." },
 ];
 
