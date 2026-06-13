@@ -5,6 +5,7 @@ import dishIndian from "@/assets/dish-indian.jpg";
 import dishItalian from "@/assets/dish-italian.jpg";
 import dishFusion from "@/assets/dish-fusion.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
+import saffronLogo from "@/assets/saffron7-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,64 +27,18 @@ export const Route = createFileRoute("/")({
 function Logo({
   className = "",
   size = "md",
-  compact = false,
 }: {
   className?: string;
   size?: "sm" | "md" | "lg" | "xl";
   compact?: boolean;
 }) {
-  const sizes = { sm: "h-9", md: "h-14", lg: "h-24", xl: "h-40 md:h-56" };
-  const vbHeight = compact ? 160 : 220;
+  const sizes = { sm: "h-10", md: "h-16", lg: "h-28", xl: "h-44 md:h-64" };
   return (
-    <div className={`inline-flex flex-col items-center ${className}`}>
-      <svg
-        viewBox={`0 0 600 ${vbHeight}`}
-        className={`${sizes[size]} w-auto`}
-        role="img"
-        aria-label="Saffron 7 — Indian Italian Fusion"
-      >
-        {/* Saffron flame ornament */}
-        <g transform="translate(300 18)">
-          <path
-            d="M0 -8 C -4 0, -10 4, -10 14 C -10 22, -4 28, 0 30 C 4 28, 10 22, 10 14 C 10 4, 4 0, 0 -8 Z"
-            fill="var(--saffron)"
-          />
-          <path d="M0 8 C -3 14, -3 22, 0 28 C 3 22, 3 14, 0 8 Z" fill="var(--gold)" opacity="0.85" />
-          <path d="M0 30 L 0 42" stroke="var(--saffron)" strokeWidth="2.5" strokeLinecap="round" />
-        </g>
-        {/* Wordmark */}
-        <text
-          x="300"
-          y="140"
-          textAnchor="middle"
-          fontFamily="'Cormorant Garamond', serif"
-          fontWeight="700"
-          fontSize="120"
-          letterSpacing="6"
-          fill="var(--saffron)"
-        >
-          SAFFRON 7
-        </text>
-        {!compact && (
-          <>
-            <line x1="120" y1="178" x2="170" y2="178" stroke="var(--gold)" strokeWidth="1.2" />
-            <line x1="430" y1="178" x2="480" y2="178" stroke="var(--gold)" strokeWidth="1.2" />
-            <text
-              x="300"
-              y="184"
-              textAnchor="middle"
-              fontFamily="'Cormorant Garamond', serif"
-              fontWeight="600"
-              fontSize="22"
-              letterSpacing="8"
-              fill="var(--forest)"
-            >
-              INDIAN · ITALIAN · FUSION
-            </text>
-          </>
-        )}
-      </svg>
-    </div>
+    <img
+      src={saffronLogo.url}
+      alt="Saffron 7 — Indian · Italian · Fusion"
+      className={`${sizes[size]} w-auto object-contain ${className}`}
+    />
   );
 }
 
@@ -274,7 +229,7 @@ function Cuisine() {
 }
 
 const features = [
-  { label: "Pure Veg", icon: "🌿" },
+  { label: "Veg", icon: "🌿" },
   { label: "Non Veg", icon: "🍗" },
   { label: "Fusion Dishes", icon: "🥘" },
   { label: "Takeout", icon: "🛍️" },
@@ -478,8 +433,8 @@ function Visit() {
           </a>
           <div className="bg-card p-6 rounded-md border border-border">
             <p className="text-xs uppercase tracking-widest text-gold mb-2">Hours</p>
-            <p className="font-display text-2xl text-saffron">Lunch & Dinner</p>
-            <p className="text-sm text-muted-foreground mt-1">Tue – Sun · 11:30am – late</p>
+            <p className="font-display text-2xl text-saffron">Open Daily</p>
+            <p className="text-sm text-muted-foreground mt-1">Monday – Sunday · 12:00 PM – 12:00 AM</p>
           </div>
           <div className="bg-card p-6 rounded-md border border-border">
             <p className="text-xs uppercase tracking-widest text-gold mb-3">Follow Along</p>
