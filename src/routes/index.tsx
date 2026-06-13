@@ -132,15 +132,14 @@ function Story() {
       <div className="max-w-4xl mx-auto text-center">
         <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">Our Story</p>
         <h2 className="font-display text-5xl md:text-6xl text-saffron mb-2">
-          Where Mumbai Meets Milan
+          A New Kind of Table in Windsor
         </h2>
         <GoldDivider label="❖" />
         <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-6">
-          Saffron 7 is born from a simple belief — that the soul of Indian spice and the
-          romance of Italian craft belong on the same table. In the heart of Windsor,
-          Ontario, we are building a warm, casual home for flavour-lovers, where
-          handmade pasta sits beside slow-simmered curries, and tiramisu shares a plate
-          with saffron kulfi.
+          Saffron 7 is built on a simple belief — that bold Indian spice and the warmth
+          of Italian craft belong on the same table. On University Avenue West, we're
+          opening a casual, welcoming home for flavour-lovers, where handmade pasta sits
+          beside slow-simmered curries, and dessert is always worth saving room for.
         </p>
         <p className="text-base text-muted-foreground italic">
           Authentic recipes. Warm hospitality. An unforgettable experience.
