@@ -385,42 +385,50 @@ function Visit() {
         <GoldDivider label="❖" />
 
         <div className="grid md:grid-cols-3 gap-8 mt-10 text-left">
-          <div className="bg-card p-6 rounded-md border border-border">
-            <p className="text-xs uppercase tracking-widest text-gold mb-2">Location</p>
-            <p className="font-display text-2xl text-saffron">Downtown Windsor</p>
-            <p className="text-sm text-muted-foreground mt-1">Address revealed at opening</p>
-          </div>
+          <a
+            href="https://maps.google.com/?q=1457+University+Ave+West+Unit+C+Windsor+ON"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-card p-6 rounded-md border border-border hover:border-gold transition block"
+          >
+            <p className="text-xs uppercase tracking-widest text-gold mb-2">Find Us</p>
+            <p className="font-display text-2xl text-saffron leading-snug">
+              1457 University Ave West, Unit C
+            </p>
+            <p className="text-sm text-muted-foreground mt-1">Windsor, ON · N9B 1B8</p>
+          </a>
           <div className="bg-card p-6 rounded-md border border-border">
             <p className="text-xs uppercase tracking-widest text-gold mb-2">Hours</p>
             <p className="font-display text-2xl text-saffron">Lunch & Dinner</p>
             <p className="text-sm text-muted-foreground mt-1">Tue – Sun · 11:30am – late</p>
           </div>
           <div className="bg-card p-6 rounded-md border border-border">
-            <p className="text-xs uppercase tracking-widest text-gold mb-2">Reservations</p>
-            <p className="font-display text-2xl text-saffron">hello@saffron7.ca</p>
-            <p className="text-sm text-muted-foreground mt-1">We'll reply within a day</p>
+            <p className="text-xs uppercase tracking-widest text-gold mb-2">Follow Along</p>
+            <div className="flex flex-col gap-1 mt-1">
+              <a
+                href="https://instagram.com/Saffron7Windsor"
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xl text-saffron hover:text-forest transition"
+              >
+                @Saffron7Windsor
+              </a>
+              <a
+                href="https://facebook.com/Saffron7Windsor"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-muted-foreground hover:text-saffron transition"
+              >
+                facebook.com/Saffron7Windsor
+              </a>
+            </div>
           </div>
         </div>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            const f = e.currentTarget as HTMLFormElement;
-            f.reset();
-            alert("Thanks! We'll let you know the moment our doors open.");
-          }}
-          className="mt-12 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
-        >
-          <input
-            required
-            type="email"
-            placeholder="Your email for opening night"
-            className="flex-1 px-5 py-3 rounded-full bg-card border border-border focus:outline-none focus:ring-2 focus:ring-saffron"
-          />
-          <button className="px-7 py-3 rounded-full bg-saffron text-primary-foreground tracking-wider uppercase text-sm shadow-warm hover:opacity-90 transition">
-            Notify Me
-          </button>
-        </form>
+        <p className="mt-12 text-sm text-muted-foreground">
+          Opening soon — follow us on Instagram for first looks, menu reveals, and our launch date.
+        </p>
+
       </div>
     </section>
   );
