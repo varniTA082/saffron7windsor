@@ -103,12 +103,6 @@ function Nav() {
               <path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.4-2 2-2h2V2c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V10H6v4h3v8h4z" />
             </svg>
           </a>
-          <a
-            href="#visit"
-            className="ml-2 inline-flex items-center px-5 py-2 rounded-full bg-saffron text-primary-foreground text-sm tracking-wider uppercase hover:opacity-90 transition"
-          >
-            Reserve
-          </a>
         </div>
       </div>
     </header>
