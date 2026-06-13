@@ -115,7 +115,7 @@ function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Logo />
+        <Logo size="sm" compact />
         <nav className="hidden md:flex items-center gap-8 text-sm tracking-wider uppercase">
           <a href="#story" className="hover:text-saffron transition">Story</a>
           <a href="#cuisine" className="hover:text-saffron transition">Cuisine</a>
@@ -152,6 +152,7 @@ function Hero() {
         <p className="font-script text-gold text-2xl md:text-3xl mb-4 drop-shadow">
           Coming Soon to Windsor
         </p>
+        <h1 className="sr-only">Saffron 7 — Indian, Italian & Fusion Restaurant in Windsor, Ontario</h1>
         <div className="drop-shadow-lg flex justify-center mb-4">
           <Logo size="xl" />
         </div>
@@ -491,7 +492,7 @@ function Footer() {
     <footer className="bg-forest text-cream/90 py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
         <div>
-          <Logo />
+          <Logo size="md" />
           <p className="text-xs uppercase tracking-[0.3em] text-gold mt-2">
             Indian · Italian · Fusion
           </p>
