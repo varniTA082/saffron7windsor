@@ -82,6 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Saffron 7" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "google-site-verification", content: "0MovsgpEMoopcU7_mB8IIAXZeHeSPGrHvWrykbG-bTs" },
     ],
     links: [
       {
