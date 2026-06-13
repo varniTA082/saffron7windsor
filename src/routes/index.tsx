@@ -132,15 +132,14 @@ function Story() {
       <div className="max-w-4xl mx-auto text-center">
         <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">Our Story</p>
         <h2 className="font-display text-5xl md:text-6xl text-saffron mb-2">
-          Where Mumbai Meets Milan
+          A New Kind of Table in Windsor
         </h2>
         <GoldDivider label="❖" />
         <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-6">
-          Saffron 7 is born from a simple belief — that the soul of Indian spice and the
-          romance of Italian craft belong on the same table. In the heart of Windsor,
-          Ontario, we are building a warm, casual home for flavour-lovers, where
-          handmade pasta sits beside slow-simmered curries, and tiramisu shares a plate
-          with saffron kulfi.
+          Saffron 7 is built on a simple belief — that bold Indian spice and the warmth
+          of Italian craft belong on the same table. On University Avenue West, we're
+          opening a casual, welcoming home for flavour-lovers, where handmade pasta sits
+          beside slow-simmered curries, and dessert is always worth saving room for.
         </p>
         <p className="text-base text-muted-foreground italic">
           Authentic recipes. Warm hospitality. An unforgettable experience.
@@ -238,17 +237,36 @@ function Experience() {
           <p className="uppercase tracking-[0.3em] text-xs text-muted-foreground mb-6">
             Order in with
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {["Uber Eats", "SkipTheDishes", "DoorDash"].map((p) => (
-              <span
-                key={p}
-                className="px-6 py-3 rounded-full bg-card border border-gold/40 font-display text-xl text-saffron"
-              >
-                {p}
-              </span>
-            ))}
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <a
+              href="#"
+              aria-label="Order on Uber Eats"
+              className="px-7 py-4 rounded-full bg-black hover:opacity-90 transition shadow-soft inline-flex items-center"
+            >
+              <span className="text-white font-bold text-xl tracking-tight">Uber </span>
+              <span className="text-[#06C167] font-bold text-xl tracking-tight">Eats</span>
+            </a>
+            <a
+              href="#"
+              aria-label="Order on SkipTheDishes"
+              className="px-7 py-4 rounded-full bg-[#FF8000] hover:opacity-90 transition shadow-soft inline-flex items-center"
+            >
+              <span className="text-white font-extrabold text-xl tracking-tight italic">Skip</span>
+              <span className="text-white font-light text-xl tracking-tight italic">TheDishes</span>
+            </a>
+            <a
+              href="#"
+              aria-label="Order on DoorDash"
+              className="px-7 py-4 rounded-full bg-[#EB1700] hover:opacity-90 transition shadow-soft inline-flex items-center gap-2"
+            >
+              <svg width="22" height="18" viewBox="0 0 32 26" aria-hidden>
+                <path fill="#fff" d="M30.3 8.5C29 5.7 26.2 4 23.2 4H2c-1 0-1.6 1.2-.9 1.9l3.7 3.7c.7.7 1.6 1.1 2.6 1.1h15.4c1.6 0 3 1.4 2.9 3-.1 1.5-1.4 2.7-2.9 2.7h-9.5c-1 0-1.6 1.2-.9 1.9l3.7 3.7c.7.7 1.6 1.1 2.6 1.1h4.3c5.9 0 10.6-5.8 8.3-12.6z"/>
+              </svg>
+              <span className="text-white font-extrabold text-xl tracking-tight">DOORDASH</span>
+            </a>
           </div>
         </div>
+
       </div>
     </section>
   );
@@ -367,42 +385,50 @@ function Visit() {
         <GoldDivider label="❖" />
 
         <div className="grid md:grid-cols-3 gap-8 mt-10 text-left">
-          <div className="bg-card p-6 rounded-md border border-border">
-            <p className="text-xs uppercase tracking-widest text-gold mb-2">Location</p>
-            <p className="font-display text-2xl text-saffron">Downtown Windsor</p>
-            <p className="text-sm text-muted-foreground mt-1">Address revealed at opening</p>
-          </div>
+          <a
+            href="https://maps.google.com/?q=1457+University+Ave+West+Unit+C+Windsor+ON"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-card p-6 rounded-md border border-border hover:border-gold transition block"
+          >
+            <p className="text-xs uppercase tracking-widest text-gold mb-2">Find Us</p>
+            <p className="font-display text-2xl text-saffron leading-snug">
+              1457 University Ave West, Unit C
+            </p>
+            <p className="text-sm text-muted-foreground mt-1">Windsor, ON · N9B 1B8</p>
+          </a>
           <div className="bg-card p-6 rounded-md border border-border">
             <p className="text-xs uppercase tracking-widest text-gold mb-2">Hours</p>
             <p className="font-display text-2xl text-saffron">Lunch & Dinner</p>
             <p className="text-sm text-muted-foreground mt-1">Tue – Sun · 11:30am – late</p>
           </div>
           <div className="bg-card p-6 rounded-md border border-border">
-            <p className="text-xs uppercase tracking-widest text-gold mb-2">Reservations</p>
-            <p className="font-display text-2xl text-saffron">hello@saffron7.ca</p>
-            <p className="text-sm text-muted-foreground mt-1">We'll reply within a day</p>
+            <p className="text-xs uppercase tracking-widest text-gold mb-2">Follow Along</p>
+            <div className="flex flex-col gap-1 mt-1">
+              <a
+                href="https://instagram.com/Saffron7Windsor"
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-xl text-saffron hover:text-forest transition"
+              >
+                @Saffron7Windsor
+              </a>
+              <a
+                href="https://facebook.com/Saffron7Windsor"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-muted-foreground hover:text-saffron transition"
+              >
+                facebook.com/Saffron7Windsor
+              </a>
+            </div>
           </div>
         </div>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            const f = e.currentTarget as HTMLFormElement;
-            f.reset();
-            alert("Thanks! We'll let you know the moment our doors open.");
-          }}
-          className="mt-12 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
-        >
-          <input
-            required
-            type="email"
-            placeholder="Your email for opening night"
-            className="flex-1 px-5 py-3 rounded-full bg-card border border-border focus:outline-none focus:ring-2 focus:ring-saffron"
-          />
-          <button className="px-7 py-3 rounded-full bg-saffron text-primary-foreground tracking-wider uppercase text-sm shadow-warm hover:opacity-90 transition">
-            Notify Me
-          </button>
-        </form>
+        <p className="mt-12 text-sm text-muted-foreground">
+          Opening soon — follow us on Instagram for first looks, menu reveals, and our launch date.
+        </p>
+
       </div>
     </section>
   );
@@ -411,19 +437,42 @@ function Visit() {
 function Footer() {
   return (
     <footer className="bg-forest text-cream/90 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
         <div>
-          <Logo className="brightness-0 invert opacity-90" />
+          <Logo />
           <p className="text-xs uppercase tracking-[0.3em] text-gold mt-2">
             Indian · Italian · Fusion
           </p>
+          <p className="text-sm text-cream/70 mt-3 leading-relaxed">
+            1457 University Ave West, Unit C<br />Windsor, ON · N9B 1B8
+          </p>
         </div>
-        <p className="font-script text-xl text-gold">
-          Flavours without borders.
-        </p>
-        <p className="text-xs text-cream/60">
-          © {new Date().getFullYear()} Saffron 7 · Windsor, Ontario
-        </p>
+        <div className="text-center">
+          <p className="font-script text-2xl text-gold">Flavours without borders.</p>
+        </div>
+        <div className="flex md:justify-end gap-3">
+          <a
+            href="https://instagram.com/Saffron7Windsor"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram @Saffron7Windsor"
+            className="w-11 h-11 rounded-full border border-gold/60 text-gold flex items-center justify-center hover:bg-gold/20 transition"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a
+            href="https://facebook.com/Saffron7Windsor"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook Saffron7Windsor"
+            className="w-11 h-11 rounded-full border border-gold/60 text-gold flex items-center justify-center hover:bg-gold/20 transition"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.4-2 2-2h2V2c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V10H6v4h3v8h4z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-gold/20 text-xs text-cream/60 text-center">
+        © {new Date().getFullYear()} Saffron 7 · Windsor, Ontario
       </div>
     </footer>
   );
