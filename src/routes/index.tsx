@@ -139,13 +139,10 @@ function Hero() {
         <p className="font-script text-gold text-2xl md:text-3xl mb-4 drop-shadow">
           Coming Soon to Windsor
         </p>
-        <h1 className="font-display text-6xl md:text-9xl font-bold text-saffron leading-none drop-shadow-lg">
-          Saffron <span className="italic">7</span>
-        </h1>
+        <div className="drop-shadow-lg flex justify-center mb-4">
+          <Logo size="xl" />
+        </div>
         <GoldDivider />
-        <p className="uppercase tracking-[0.4em] text-foreground/80 text-sm md:text-base mb-6">
-          Indian · Italian · Fusion
-        </p>
         <p className="font-script text-2xl md:text-4xl text-forest mb-10">
           Flavours without borders. Experience without limits.
         </p>
