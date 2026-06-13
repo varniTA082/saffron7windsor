@@ -123,12 +123,38 @@ function Nav() {
           <a href="#reviews" className="hover:text-saffron transition">Reviews</a>
           <a href="#visit" className="hover:text-saffron transition">Visit</a>
         </nav>
-        <a
-          href="#visit"
-          className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-saffron text-primary-foreground text-sm tracking-wider uppercase hover:opacity-90 transition"
-        >
-          Reserve
-        </a>
+        <div className="hidden md:flex items-center gap-2">
+          <a
+            href="https://instagram.com/Saffron7Windsor"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram @Saffron7Windsor"
+            className="w-9 h-9 rounded-full flex items-center justify-center text-saffron hover:bg-saffron hover:text-primary-foreground transition"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            href="https://facebook.com/Saffron7Windsor"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook Saffron7Windsor"
+            className="w-9 h-9 rounded-full flex items-center justify-center text-saffron hover:bg-saffron hover:text-primary-foreground transition"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.4-2 2-2h2V2c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V10H6v4h3v8h4z" />
+            </svg>
+          </a>
+          <a
+            href="#visit"
+            className="ml-2 inline-flex items-center px-5 py-2 rounded-full bg-saffron text-primary-foreground text-sm tracking-wider uppercase hover:opacity-90 transition"
+          >
+            Reserve
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -456,27 +482,37 @@ function Visit() {
             <p className="text-sm text-muted-foreground mt-1">Tue – Sun · 11:30am – late</p>
           </div>
           <div className="bg-card p-6 rounded-md border border-border">
-            <p className="text-xs uppercase tracking-widest text-gold mb-2">Follow Along</p>
-            <div className="flex flex-col gap-1 mt-1">
+            <p className="text-xs uppercase tracking-widest text-gold mb-3">Follow Along</p>
+            <div className="flex gap-3">
               <a
                 href="https://instagram.com/Saffron7Windsor"
                 target="_blank"
                 rel="noreferrer"
-                className="font-display text-xl text-saffron hover:text-forest transition"
+                aria-label="Instagram @Saffron7Windsor"
+                className="group flex-1 flex items-center gap-3 px-4 py-3 rounded-md bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white hover:opacity-90 transition"
               >
-                @Saffron7Windsor
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                </svg>
+                <span className="font-semibold text-sm">@Saffron7Windsor</span>
               </a>
               <a
                 href="https://facebook.com/Saffron7Windsor"
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm text-muted-foreground hover:text-saffron transition"
+                aria-label="Facebook Saffron7Windsor"
+                className="flex items-center justify-center w-12 rounded-md bg-[#1877F2] text-white hover:opacity-90 transition"
               >
-                facebook.com/Saffron7Windsor
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.4-2 2-2h2V2c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V10H6v4h3v8h4z" />
+                </svg>
               </a>
             </div>
           </div>
         </div>
+
 
         <p className="mt-12 text-sm text-muted-foreground">
           Opening soon — follow us on Instagram for first looks, menu reveals, and our launch date.
