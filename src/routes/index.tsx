@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import heroSpread from "@/assets/hero-spread.jpg";
 import dishBiryani from "@/assets/dish-biryani.jpg";
 import dishSamosa from "@/assets/dish-samosa.jpg";
