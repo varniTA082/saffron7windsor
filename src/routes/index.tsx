@@ -238,6 +238,15 @@ function Cuisine() {
             Three Traditions. One Table.
           </h2>
           <GoldDivider />
+          <p className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-muted-foreground border border-gold/30 rounded-full px-4 py-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-green-600" />
+            Vegetarian
+            <span className="opacity-50">·</span>
+            <span className="inline-block w-2 h-2 rounded-full bg-red-600" />
+            Non-Vegetarian
+            <span className="opacity-50">—</span>
+            Prepared separately
+          </p>
         </div>
         <Carousel
           opts={{ align: "start", loop: true }}
