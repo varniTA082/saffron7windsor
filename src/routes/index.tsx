@@ -1,10 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroSpread from "@/assets/hero-spread.jpg";
-import dishIndian from "@/assets/dish-biryani.jpg";
-import dishItalian from "@/assets/dish-rose-pasta.jpg";
-import dishFusion from "@/assets/dish-fusion.jpg";
-import dishDessert from "@/assets/dish-rasmalai.jpg";
+import dishBiryani from "@/assets/dish-biryani.jpg";
+import dishSamosa from "@/assets/dish-samosa.jpg";
+import dishMalaiKofta from "@/assets/dish-malai-kofta.jpg";
+import dishRosePasta from "@/assets/dish-rose-pasta.jpg";
+import dishArrabiata from "@/assets/dish-arrabiata.jpg";
+import dishTikkaPasta from "@/assets/dish-tikka-pasta.jpg";
+import dishRasmalai from "@/assets/dish-rasmalai.jpg";
+import dishGulabJamun from "@/assets/dish-gulab-jamun.jpg";
+import dishBiscoff from "@/assets/dish-biscoff.jpg";
+import dishTiramisu from "@/assets/dish-tiramisu.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import saffronLogo from "@/assets/saffron7-logo.png";
 import saffronLogoJpeg from "@/assets/saffron7-logo.jpeg.asset.json";
 
