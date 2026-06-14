@@ -12,6 +12,16 @@ import dishRasmalai from "@/assets/dish-rasmalai.jpg";
 import dishGulabJamun from "@/assets/dish-gulab-jamun.jpg";
 import dishBiscoff from "@/assets/dish-biscoff.jpg";
 import dishTiramisu from "@/assets/dish-tiramisu.jpg";
+import dishFriedRice from "@/assets/dish-fried-rice.jpg";
+import dishVegNoodles from "@/assets/dish-veg-noodles.jpg";
+import dishFishPakora from "@/assets/dish-fish-pakora.jpg";
+import dishMalaiTikka from "@/assets/dish-malai-tikka.jpg";
+import dishOreoShake from "@/assets/dish-oreo-shake.jpg";
+import dishMangoLassi from "@/assets/dish-mango-lassi.jpg";
+import dishChai from "@/assets/dish-chai.jpg";
+import dishButterChicken from "@/assets/dish-butter-chicken.jpg";
+import dishButterNaan from "@/assets/dish-butter-naan.jpg";
+import dishGarlicNaan from "@/assets/dish-garlic-naan.jpg";
 import chefMayank from "@/assets/chef-mayank.jpg";
 import {
   Carousel,
