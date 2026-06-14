@@ -12,6 +12,7 @@ import dishRasmalai from "@/assets/dish-rasmalai.jpg";
 import dishGulabJamun from "@/assets/dish-gulab-jamun.jpg";
 import dishBiscoff from "@/assets/dish-biscoff.jpg";
 import dishTiramisu from "@/assets/dish-tiramisu.jpg";
+import chefMayank from "@/assets/chef-mayank.jpg";
 import {
   Carousel,
   CarouselContent,
