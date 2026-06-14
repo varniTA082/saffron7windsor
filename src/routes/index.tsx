@@ -220,6 +220,7 @@ function Cuisine() {
         </div>
         <Carousel
           opts={{ align: "start", loop: true }}
+          plugins={[Autoplay({ delay: 3500, stopOnInteraction: false, stopOnMouseEnter: true })]}
           className="w-full"
         >
           <CarouselContent className="-ml-4">
