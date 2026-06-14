@@ -206,12 +206,22 @@ function Story() {
 }
 
 const dishes = [
+  { img: dishButterChicken, name: "Butter Chicken", cuisine: "Indian Classic", note: "Tender chicken in a velvety tomato-cream gravy, finished with a swirl of butter." },
   { img: dishBiryani, name: "Chicken Biryani", cuisine: "Indian Classic", note: "Fragrant basmati layered with spiced chicken, saffron and fried onions." },
+  { img: dishMalaiTikka, name: "Chicken Malai Tikka", cuisine: "Indian Classic", note: "Creamy yogurt-marinated chicken skewers, charred in the tandoor." },
+  { img: dishFishPakora, name: "Fish Pakora", cuisine: "Indian Classic", note: "Crispy gram-flour battered fish bites with mint chutney and lemon." },
   { img: dishSamosa, name: "Samosa", cuisine: "Indian Classic", note: "Crispy golden pastries with spiced potato and pea filling, mint chutney." },
   { img: dishMalaiKofta, name: "Malai Kofta", cuisine: "Indian Classic", note: "Soft paneer dumplings in a rich creamy tomato-cashew gravy." },
+  { img: dishButterNaan, name: "Butter Naan", cuisine: "From the Tandoor", note: "Pillowy clay-oven flatbread brushed with melted butter." },
+  { img: dishGarlicNaan, name: "Garlic Coriander Naan", cuisine: "From the Tandoor", note: "Tandoor naan topped with fresh garlic, cilantro and butter." },
+  { img: dishFriedRice, name: "Fried Rice", cuisine: "The Fusion", note: "Wok-tossed long-grain rice with peppers, scallions and Indo-Chinese spices." },
+  { img: dishVegNoodles, name: "Street-Style Veg Noodles", cuisine: "The Fusion", note: "Hakka-style noodles with crunchy vegetables and a smoky chili kiss." },
   { img: dishRosePasta, name: "Spicy Rose Pasta", cuisine: "Italian Soul", note: "Penne in a creamy tomato rose sauce with a chili kick." },
   { img: dishArrabiata, name: "Penne Arrabiata", cuisine: "Italian Soul", note: "Penne tossed in a fiery garlic, chili and tomato sauce." },
   { img: dishTikkaPasta, name: "Tikka Masala Pasta", cuisine: "The Fusion", note: "Penne folded into creamy tikka masala with grilled chicken tikka." },
+  { img: dishMangoLassi, name: "Mango Lassi", cuisine: "Sips", note: "Chilled yogurt blended with Alphonso mango, a pinch of cardamom." },
+  { img: dishOreoShake, name: "Oreo Shake", cuisine: "Sips", note: "Cookies-and-cream milkshake crowned with whipped cream and crumbs." },
+  { img: dishChai, name: "Masala Chai", cuisine: "Sips", note: "Strong black tea simmered with ginger, cardamom and warming spices." },
   { img: dishRasmalai, name: "Ras Malai", cuisine: "Dolce", note: "Soft paneer discs in saffron-kissed milk, pistachio crown." },
   { img: dishGulabJamun, name: "Gulab Jamun", cuisine: "Dolce", note: "Warm milk dumplings soaked in rose-cardamom syrup, pistachio." },
   { img: dishBiscoff, name: "Mini Lotus Biscoff Cake", cuisine: "Dolce", note: "Cookie-base cheesecake topped with molten Biscoff caramel." },
