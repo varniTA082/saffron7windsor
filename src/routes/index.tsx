@@ -28,15 +28,17 @@ export const Route = createFileRoute("/")({
 function Logo({
   className = "",
   size = "md",
+  src = saffronLogo,
 }: {
   className?: string;
   size?: "sm" | "md" | "lg" | "xl";
   compact?: boolean;
+  src?: string;
 }) {
   const sizes = { sm: "h-10", md: "h-16", lg: "h-28", xl: "h-44 md:h-64" };
   return (
     <img
-      src={saffronLogo}
+      src={src}
       alt="Saffron 7 — Indian · Italian · Fusion"
       className={`${sizes[size]} w-auto object-contain ${className}`}
     />
