@@ -184,7 +184,7 @@ function Story() {
         <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-6">
           Saffron 7 is built on a simple belief — that bold Indian spice and the warmth
           of Italian craft belong on the same table. On University Avenue West, we're
-          opening a casual, welcoming home for flavour-lovers, where handmade pasta sits
+          opening a casual, welcoming home for flavour-lovers, where rose-sauce penne sits
           beside slow-simmered curries, and dessert is always worth saving room for.
         </p>
         <p className="text-base text-muted-foreground italic">
