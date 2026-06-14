@@ -5,7 +5,7 @@ import dishIndian from "@/assets/dish-biryani.jpg";
 import dishItalian from "@/assets/dish-rose-pasta.jpg";
 import dishFusion from "@/assets/dish-fusion.jpg";
 import dishDessert from "@/assets/dish-rasmalai.jpg";
-import saffronLogo from "@/assets/saffron7-logo.jpeg.asset.json";
+import saffronLogo from "@/assets/saffron7-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
