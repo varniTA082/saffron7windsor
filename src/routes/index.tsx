@@ -6,6 +6,7 @@ import dishItalian from "@/assets/dish-rose-pasta.jpg";
 import dishFusion from "@/assets/dish-fusion.jpg";
 import dishDessert from "@/assets/dish-rasmalai.jpg";
 import saffronLogo from "@/assets/saffron7-logo.png";
+import saffronLogoJpeg from "@/assets/saffron7-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,15 +28,17 @@ export const Route = createFileRoute("/")({
 function Logo({
   className = "",
   size = "md",
+  src = saffronLogo,
 }: {
   className?: string;
   size?: "sm" | "md" | "lg" | "xl";
   compact?: boolean;
+  src?: string;
 }) {
   const sizes = { sm: "h-10", md: "h-16", lg: "h-28", xl: "h-44 md:h-64" };
   return (
     <img
-      src={saffronLogo}
+      src={src}
       alt="Saffron 7 — Indian · Italian · Fusion"
       className={`${sizes[size]} w-auto object-contain ${className}`}
     />
@@ -477,7 +480,7 @@ function Footer() {
     <footer className="bg-forest text-cream/90 py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
         <div>
-          <Logo size="md" />
+          <Logo size="md" src={saffronLogoJpeg.url} />
           <p className="text-xs uppercase tracking-[0.3em] text-gold mt-2">
             Indian · Italian · Fusion
           </p>
