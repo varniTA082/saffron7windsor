@@ -203,8 +203,8 @@ const dishes = [
   { img: dishTikkaPasta, name: "Tikka Masala Pasta", cuisine: "The Fusion", note: "Penne folded into creamy tikka masala with grilled chicken tikka." },
   { img: dishRasmalai, name: "Ras Malai", cuisine: "Dolce", note: "Soft paneer discs in saffron-kissed milk, pistachio crown." },
   { img: dishGulabJamun, name: "Gulab Jamun", cuisine: "Dolce", note: "Warm milk dumplings soaked in rose-cardamom syrup, pistachio." },
-  { img: dishBiscoff, name: "Lotus Biscoff Mini Cake", cuisine: "Dolce", note: "Cookie-base cheesecake topped with molten Biscoff caramel." },
-  { img: dishTiramisu, name: "Tiramisu Mini Cake", cuisine: "Dolce", note: "Mascarpone, espresso-soaked ladyfingers, dusted with cocoa." },
+  { img: dishBiscoff, name: "Mini Lotus Biscoff Cake", cuisine: "Dolce", note: "Cookie-base cheesecake topped with molten Biscoff caramel." },
+  { img: dishTiramisu, name: "Mini Tiramisu Cake", cuisine: "Dolce", note: "Mascarpone, espresso-soaked ladyfingers, dusted with cocoa." },
 ];
 
 function Cuisine() {
