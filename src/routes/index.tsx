@@ -1,10 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroSpread from "@/assets/hero-spread.jpg";
-import dishIndian from "@/assets/dish-biryani.jpg";
-import dishItalian from "@/assets/dish-rose-pasta.jpg";
-import dishFusion from "@/assets/dish-fusion.jpg";
-import dishDessert from "@/assets/dish-rasmalai.jpg";
+import dishBiryani from "@/assets/dish-biryani.jpg";
+import dishSamosa from "@/assets/dish-samosa.jpg";
+import dishMalaiKofta from "@/assets/dish-malai-kofta.jpg";
+import dishRosePasta from "@/assets/dish-rose-pasta.jpg";
+import dishArrabiata from "@/assets/dish-arrabiata.jpg";
+import dishTikkaPasta from "@/assets/dish-tikka-pasta.jpg";
+import dishRasmalai from "@/assets/dish-rasmalai.jpg";
+import dishGulabJamun from "@/assets/dish-gulab-jamun.jpg";
+import dishBiscoff from "@/assets/dish-biscoff.jpg";
+import dishTiramisu from "@/assets/dish-tiramisu.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import saffronLogo from "@/assets/saffron7-logo.png";
 import saffronLogoJpeg from "@/assets/saffron7-logo.jpeg.asset.json";
 
@@ -181,10 +194,16 @@ function Story() {
 }
 
 const dishes = [
-  { img: dishIndian, name: "Chicken Biryani", cuisine: "Indian Classic", note: "Fragrant basmati layered with spiced chicken, saffron and fried onions." },
-  { img: dishItalian, name: "Spicy Rose Pasta", cuisine: "Italian Soul", note: "Penne in a creamy tomato rose sauce with a chili kick." },
-  { img: dishFusion, name: "Paneer Tikka Skewers", cuisine: "The Fusion", note: "Charred paneer on banana leaf, basil-mint chutney." },
-  { img: dishDessert, name: "Ras Malai", cuisine: "Dolce", note: "Soft paneer discs in saffron-kissed milk, pistachio crown." },
+  { img: dishBiryani, name: "Chicken Biryani", cuisine: "Indian Classic", note: "Fragrant basmati layered with spiced chicken, saffron and fried onions." },
+  { img: dishSamosa, name: "Samosa", cuisine: "Indian Classic", note: "Crispy golden pastries with spiced potato and pea filling, mint chutney." },
+  { img: dishMalaiKofta, name: "Malai Kofta", cuisine: "Indian Classic", note: "Soft paneer dumplings in a rich creamy tomato-cashew gravy." },
+  { img: dishRosePasta, name: "Spicy Rose Pasta", cuisine: "Italian Soul", note: "Penne in a creamy tomato rose sauce with a chili kick." },
+  { img: dishArrabiata, name: "Penne Arrabiata", cuisine: "Italian Soul", note: "Penne tossed in a fiery garlic, chili and tomato sauce." },
+  { img: dishTikkaPasta, name: "Tikka Masala Pasta", cuisine: "The Fusion", note: "Penne folded into creamy tikka masala with grilled chicken tikka." },
+  { img: dishRasmalai, name: "Ras Malai", cuisine: "Dolce", note: "Soft paneer discs in saffron-kissed milk, pistachio crown." },
+  { img: dishGulabJamun, name: "Gulab Jamun", cuisine: "Dolce", note: "Warm milk dumplings soaked in rose-cardamom syrup, pistachio." },
+  { img: dishBiscoff, name: "Lotus Biscoff Mini Cake", cuisine: "Dolce", note: "Cookie-base cheesecake topped with molten Biscoff caramel." },
+  { img: dishTiramisu, name: "Tiramisu Mini Cake", cuisine: "Dolce", note: "Mascarpone, espresso-soaked ladyfingers, dusted with cocoa." },
 ];
 
 function Cuisine() {
@@ -198,28 +217,42 @@ function Cuisine() {
           </h2>
           <GoldDivider />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {dishes.map((d) => (
-            <article
-              key={d.name}
-              className="group bg-card rounded-md overflow-hidden shadow-soft hover:shadow-warm transition-all duration-500 hover:-translate-y-2"
-            >
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={d.img}
-                  alt={d.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="p-6 text-center">
-                <p className="text-xs uppercase tracking-widest text-gold mb-1">{d.cuisine}</p>
-                <h3 className="font-display text-2xl text-saffron mb-2">{d.name}</h3>
-                <p className="text-sm text-muted-foreground">{d.note}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <Carousel
+          opts={{ align: "start", loop: true }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {dishes.map((d) => (
+              <CarouselItem
+                key={d.name}
+                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+              >
+                <article className="group h-full bg-card rounded-md overflow-hidden shadow-soft hover:shadow-warm transition-all duration-500 hover:-translate-y-2">
+                  <div className="aspect-[3/4] overflow-hidden">
+                    <img
+                      src={d.img}
+                      alt={d.name}
+                      loading="lazy"
+                      width={1024}
+                      height={768}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <p className="text-xs uppercase tracking-widest text-gold mb-1">{d.cuisine}</p>
+                    <h3 className="font-display text-2xl text-saffron mb-2">{d.name}</h3>
+                    <p className="text-sm text-muted-foreground">{d.note}</p>
+                  </div>
+                </article>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4 lg:-left-6 bg-card border-gold text-saffron hover:bg-gold/10" />
+          <CarouselNext className="hidden md:flex -right-4 lg:-right-6 bg-card border-gold text-saffron hover:bg-gold/10" />
+        </Carousel>
+        <p className="text-center text-xs text-muted-foreground mt-6 md:hidden">
+          Swipe to explore →
+        </p>
       </div>
     </section>
   );
