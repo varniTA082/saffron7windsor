@@ -480,7 +480,7 @@ function Footer() {
     <footer className="bg-forest text-cream/90 py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
         <div>
-          <Logo size="md" />
+          <Logo size="md" src={saffronLogoJpeg.url} />
           <p className="text-xs uppercase tracking-[0.3em] text-gold mt-2">
             Indian · Italian · Fusion
           </p>
