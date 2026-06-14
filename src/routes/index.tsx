@@ -306,7 +306,7 @@ function Experience() {
               Raised in kitchens that smelled of cardamom at dawn and basil at dusk, Chef Mayank built Saffron 7 around a simple idea: the best meals don&apos;t belong to one country. They belong to whoever is hungry, at whatever table.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              From slow-cooked biryanis to wood-fired pastas, every dish is hand-built from spices ground in-house and sauces that simmer for hours — never shortcuts, never compromises.
+              From slow-cooked biryanis to hand-rolled pastas, every dish is hand-built from spices ground in-house and sauces that simmer for hours — never shortcuts, never compromises.
             </p>
 
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gold/20">
