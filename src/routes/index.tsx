@@ -12,6 +12,7 @@ import dishRasmalai from "@/assets/dish-rasmalai.jpg";
 import dishGulabJamun from "@/assets/dish-gulab-jamun.jpg";
 import dishBiscoff from "@/assets/dish-biscoff.jpg";
 import dishTiramisu from "@/assets/dish-tiramisu.jpg";
+import chefMayank from "@/assets/chef-mayank.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -260,13 +261,10 @@ function Cuisine() {
   );
 }
 
-const features = [
-  { label: "Veg", icon: "🌿" },
-  { label: "Non Veg", icon: "🍗" },
-  { label: "Fusion Dishes", icon: "🥘" },
-  { label: "Takeout", icon: "🛍️" },
-  { label: "Delivery", icon: "🛵" },
-  { label: "Dine In", icon: "🍽️" },
+const chefStats = [
+  { value: "15+", label: "Years in Kitchens" },
+  { value: "3", label: "Cuisines Mastered" },
+  { value: "50+", label: "Signature Dishes" },
 ];
 
 function Experience() {
@@ -274,22 +272,83 @@ function Experience() {
     <section id="experience" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">The Experience</p>
+          <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">The Chef</p>
           <h2 className="font-display text-5xl md:text-6xl text-saffron">
-            Built for Every Craving
+            Two Kitchens, One Table
           </h2>
           <GoldDivider />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {features.map((f) => (
-            <div
-              key={f.label}
-              className="aspect-square flex flex-col items-center justify-center bg-card border border-gold/30 rounded-md p-4 hover:bg-gold/10 transition"
-            >
-              <span className="text-4xl mb-3">{f.icon}</span>
-              <p className="text-xs md:text-sm uppercase tracking-wider text-center">{f.label}</p>
+
+        {/* Chef's Story */}
+        <div className="grid md:grid-cols-5 gap-10 lg:gap-14 items-center">
+          <div className="md:col-span-2">
+            <div className="relative">
+              <div className="absolute -inset-3 border border-gold/40 rounded-md -z-0" />
+              <img
+                src={chefMayank}
+                alt="Chef Mayank Kumar in the Saffron 7 kitchen"
+                loading="lazy"
+                width={768}
+                height={1024}
+                className="relative w-full aspect-[3/4] object-cover rounded-md shadow-warm"
+              />
             </div>
-          ))}
+          </div>
+          <div className="md:col-span-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3">Chef &amp; Founder</p>
+            <h3 className="font-display text-4xl md:text-5xl text-saffron mb-5">
+              Mayank Kumar
+            </h3>
+            <p className="font-script text-2xl text-forest mb-6">
+              "Every plate carries a memory — and an invitation."
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Raised in kitchens that smelled of cardamom at dawn and basil at dusk, Chef Mayank built Saffron 7 around a simple idea: the best meals don&apos;t belong to one country. They belong to whoever is hungry, at whatever table.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              From slow-cooked biryanis to wood-fired pastas, every dish is hand-built from spices ground in-house and sauces that simmer for hours — never shortcuts, never compromises.
+            </p>
+
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gold/20">
+              {chefStats.map((s) => (
+                <div key={s.label} className="text-center">
+                  <p className="font-display text-3xl md:text-4xl text-saffron">{s.value}</p>
+                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Find Us — map */}
+        <div className="mt-20">
+          <div className="text-center mb-8">
+            <p className="uppercase tracking-[0.4em] text-gold text-xs mb-3">Find Us</p>
+            <h3 className="font-display text-3xl md:text-4xl text-saffron">
+              1457 University Ave West, Windsor
+            </h3>
+          </div>
+          <div className="relative rounded-md overflow-hidden border border-gold/30 shadow-soft">
+            <iframe
+              title="Saffron 7 location map"
+              src="https://www.google.com/maps?q=1457+University+Ave+West+Unit+C+Windsor+ON&output=embed"
+              width="100%"
+              height="380"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full block grayscale-[20%]"
+            />
+          </div>
+          <div className="text-center mt-6">
+            <a
+              href="#visit"
+              className="inline-block text-xs uppercase tracking-[0.3em] text-gold border-b border-gold/40 hover:border-gold pb-1 transition"
+            >
+              See Hours &amp; Directions →
+            </a>
+          </div>
         </div>
 
         <div className="mt-14 bg-forest text-cream py-5 px-6 rounded-sm text-center">
