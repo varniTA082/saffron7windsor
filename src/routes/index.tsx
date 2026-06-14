@@ -6,6 +6,7 @@ import dishItalian from "@/assets/dish-rose-pasta.jpg";
 import dishFusion from "@/assets/dish-fusion.jpg";
 import dishDessert from "@/assets/dish-rasmalai.jpg";
 import saffronLogo from "@/assets/saffron7-logo.png";
+import saffronLogoJpeg from "@/assets/saffron7-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
