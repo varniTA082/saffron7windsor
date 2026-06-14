@@ -262,9 +262,9 @@ function Cuisine() {
 }
 
 const chefStats = [
-  { value: "15+", label: "Years in Kitchens" },
+  { value: "5+", label: "Years in Kitchens" },
   { value: "3", label: "Cuisines Mastered" },
-  { value: "50+", label: "Signature Dishes" },
+  { value: "10+", label: "Signature Dishes" },
 ];
 
 function Experience() {
