@@ -22,7 +22,7 @@ import dishChai from "@/assets/dish-chai.jpg";
 import dishButterChicken from "@/assets/dish-butter-chicken.jpg";
 import dishButterNaan from "@/assets/dish-butter-naan.jpg";
 import dishGarlicNaan from "@/assets/dish-garlic-naan.jpg";
-import chefMayank from "@/assets/chef-mayank.jpg";
+
 import {
   Carousel,
   CarouselContent,
@@ -313,14 +313,18 @@ function Experience() {
           <div className="md:col-span-2">
             <div className="relative">
               <div className="absolute -inset-3 border border-gold/40 rounded-md -z-0" />
-              <img
-                src={chefMayank}
-                alt="Chef Mayank Kumar in the Saffron 7 kitchen"
-                loading="lazy"
-                width={768}
-                height={1024}
-                className="relative w-full aspect-[3/4] object-cover rounded-md shadow-warm"
-              />
+              <div
+                role="img"
+                aria-label="Portrait of Chef Mayank Kumar — coming soon"
+                className="relative w-full aspect-[3/4] rounded-md shadow-warm overflow-hidden bg-gradient-to-br from-forest via-[#0f1d18] to-black flex flex-col items-center justify-center text-center px-6"
+              >
+                <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-stops))] from-gold to-transparent" />
+                <div className="absolute inset-4 border border-gold/30 rounded-sm" />
+                <p className="font-script text-7xl text-gold/90 leading-none mb-4 relative">S7</p>
+                <p className="uppercase tracking-[0.4em] text-gold text-[10px] mb-2 relative">Chef &amp; Founder</p>
+                <p className="font-display text-2xl text-saffron relative">Mayank Kumar</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-6 relative">Portrait coming soon</p>
+              </div>
             </div>
           </div>
           <div className="md:col-span-3">
