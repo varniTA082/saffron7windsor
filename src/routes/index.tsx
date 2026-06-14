@@ -35,7 +35,7 @@ function Logo({
   const sizes = { sm: "h-10", md: "h-16", lg: "h-28", xl: "h-44 md:h-64" };
   return (
     <img
-      src={saffronLogo.url}
+      src={saffronLogo}
       alt="Saffron 7 — Indian · Italian · Fusion"
       className={`${sizes[size]} w-auto object-contain ${className}`}
     />
