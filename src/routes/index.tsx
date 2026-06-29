@@ -101,11 +101,11 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo size="sm" compact />
         <nav className="hidden md:flex items-center gap-8 text-sm tracking-wider uppercase">
-          <a href="#story" className="hover:text-saffron transition">Story</a>
-          <a href="#cuisine" className="hover:text-saffron transition">Cuisine</a>
-          <a href="#experience" className="hover:text-saffron transition">Experience</a>
-          <a href="#reviews" className="hover:text-saffron transition">Reviews</a>
-          <a href="#visit" className="hover:text-saffron transition">Visit</a>
+          <a href="#story" className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-saffron after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left hover:text-saffron transition-colors">Story</a>
+          <a href="#cuisine" className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-saffron after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left hover:text-saffron transition-colors">Cuisine</a>
+          <a href="#experience" className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-saffron after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left hover:text-saffron transition-colors">Experience</a>
+          <a href="#reviews" className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-saffron after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left hover:text-saffron transition-colors">Reviews</a>
+          <a href="#visit" className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-saffron after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left hover:text-saffron transition-colors">Visit</a>
         </nav>
         <div className="hidden md:flex items-center gap-2">
           <a
@@ -189,7 +189,7 @@ function Story() {
       <div className="max-w-4xl mx-auto text-center">
         <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">Our Story</p>
         <h2 className="font-display text-5xl md:text-6xl text-saffron mb-2">
-          A New Kind of Table in Windsor
+          A New Kind of Table in Windsor — Coming Soon
         </h2>
         <GoldDivider label="❖" />
         <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-6">
