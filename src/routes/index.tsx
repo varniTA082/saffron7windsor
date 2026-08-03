@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
+import { getGoogleReviews, type GoogleReview } from "@/lib/api/reviews.functions";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import heroSpread from "@/assets/hero-spread.jpg";
@@ -465,6 +467,20 @@ function Stars({ n }: { n: number }) {
 }
 
 function Reviews() {
+  const { data } = useQuery({
+    queryKey: ["google-reviews"],
+    queryFn: () => getGoogleReviews(),
+    staleTime: 1000 * 60 * 60,
+    retry: false,
+  });
+
+  const live = data?.reviews?.length ? data.reviews : null;
+  const items: GoogleReview[] = live ?? reviews;
+  const rating = data?.rating ?? 4.9;
+  const mapsUri =
+    data?.mapsUri ??
+    "https://www.google.com/maps/search/?api=1&query=Saffron+7+1457+University+Ave+West+Windsor+ON";
+
   return (
     <section id="reviews" className="py-28 px-6 bg-foreground/[0.03]">
       <div className="max-w-6xl mx-auto">
@@ -475,31 +491,46 @@ function Reviews() {
           </h2>
           <GoldDivider />
           <div className="flex items-center justify-center gap-3 mt-4">
-            <span className="font-display text-4xl text-saffron">4.9</span>
+            <span className="font-display text-4xl text-saffron">{rating.toFixed(1)}</span>
             <div>
-              <Stars n={5} />
-              <p className="text-xs text-muted-foreground">Based on early guest feedback</p>
+              <Stars n={Math.round(rating)} />
+              <p className="text-xs text-muted-foreground">
+                {live && data?.total
+                  ? `Based on ${data.total} Google reviews`
+                  : "Based on early guest feedback"}
+              </p>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reviews.map((r) => (
+          {items.slice(0, 4).map((r) => (
             <article
-              key={r.name}
+              key={`${r.name}-${r.when}`}
               className="bg-card p-6 rounded-md shadow-soft border border-border flex flex-col"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-saffron text-primary-foreground flex items-center justify-center font-display text-lg">
-                  {r.name[0]}
-                </div>
+                {r.profilePhoto ? (
+                  <img
+                    src={r.profilePhoto}
+                    alt={`${r.name} on Google`}
+                    loading="lazy"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-saffron text-primary-foreground flex items-center justify-center font-display text-lg">
+                    {r.name[0]}
+                  </div>
+                )}
                 <div>
                   <p className="font-semibold text-sm">{r.name}</p>
                   <p className="text-xs text-muted-foreground">{r.when}</p>
                 </div>
               </div>
               <Stars n={r.rating} />
-              <p className="mt-3 text-sm text-foreground/80 leading-relaxed flex-1">"{r.text}"</p>
+              <p className="mt-3 text-sm text-foreground/80 leading-relaxed flex-1 line-clamp-6">
+                "{r.text}"
+              </p>
               <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
                 <svg width="14" height="14" viewBox="0 0 48 48" aria-hidden>
                   <path fill="#4285F4" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.6 30.2 0 24 0 14.6 0 6.5 5.4 2.5 13.2l7.8 6c1.9-5.7 7.3-9.7 13.7-9.7z"/>
@@ -515,7 +546,7 @@ function Reviews() {
 
         <div className="text-center mt-12">
           <a
-            href="https://www.google.com/maps"
+            href={mapsUri}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gold text-saffron hover:bg-gold/10 transition text-sm uppercase tracking-wider"
@@ -527,6 +558,7 @@ function Reviews() {
     </section>
   );
 }
+
 
 function Visit() {
   return (
