@@ -475,7 +475,7 @@ function Reviews() {
   });
 
   const live = data?.reviews?.length ? data.reviews : null;
-  const items = live ?? reviews;
+  const items: GoogleReview[] = live ?? reviews;
   const rating = data?.rating ?? 4.9;
   const mapsUri =
     data?.mapsUri ??
