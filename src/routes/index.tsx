@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
+import { getGoogleReviews, type GoogleReview } from "@/lib/api/reviews.functions";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import heroSpread from "@/assets/hero-spread.jpg";
