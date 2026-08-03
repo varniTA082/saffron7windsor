@@ -510,7 +510,7 @@ function Reviews() {
               className="bg-card p-6 rounded-md shadow-soft border border-border flex flex-col"
             >
               <div className="flex items-center gap-3 mb-3">
-                {"profilePhoto" in r && r.profilePhoto ? (
+                {r.profilePhoto ? (
                   <img
                     src={r.profilePhoto}
                     alt={`${r.name} on Google`}
