@@ -40,9 +40,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Saffron 7 — Indian · Italian · Fusion · Windsor, ON" },
-      { name: "description", content: "Saffron 7 brings Indian, Italian and fusion flavours to Windsor, Ontario. Dine in, take out, or order on Uber Eats, SkipTheDishes & DoorDash. Opening soon." },
+      { name: "description", content: "Saffron 7 brings Indian, Italian and fusion flavours to Windsor, Ontario. Dine in, take out, or order on Uber Eats, SkipTheDishes & DoorDash. Now open and serving." },
       { property: "og:title", content: "Saffron 7 — Flavours Without Borders" },
-      { property: "og:description", content: "Indian · Italian · Fusion. Coming soon to Windsor, Ontario." },
+      { property: "og:description", content: "Indian · Italian · Fusion. Now open and serving in Windsor, Ontario." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],
@@ -156,7 +156,7 @@ function Hero() {
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <p className="font-script text-gold text-2xl md:text-3xl mb-4 drop-shadow">
-          Coming Soon to Windsor
+          Now Open in Windsor
         </p>
         <h1 className="sr-only">Saffron 7 — Indian, Italian & Fusion Restaurant in Windsor, Ontario</h1>
         <div className="drop-shadow-lg flex justify-center mb-4">
@@ -191,13 +191,13 @@ function Story() {
       <div className="max-w-4xl mx-auto text-center">
         <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">Our Story</p>
         <h2 className="font-display text-5xl md:text-6xl text-saffron mb-2">
-          A New Kind of Table in Windsor — Coming Soon
+          A New Kind of Table in Windsor — Now Open
         </h2>
         <GoldDivider label="❖" />
         <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-6">
           Saffron 7 is built on a simple belief — that bold Indian spice and the warmth
-          of Italian craft belong on the same table. On University Avenue West, we're
-          opening a casual, welcoming home for flavour-lovers, where rose-sauce penne sits
+          of Italian craft belong on the same table. On University Avenue West, we've opened
+          a casual, welcoming home for flavour-lovers, where rose-sauce penne sits
           beside slow-simmered curries, and dessert is always worth saving room for.
         </p>
         <p className="text-base text-muted-foreground italic">
@@ -566,7 +566,7 @@ function Visit() {
       <div className="max-w-5xl mx-auto text-center">
         <p className="uppercase tracking-[0.4em] text-gold text-xs mb-4">Visit Us</p>
         <h2 className="font-display text-5xl md:text-7xl text-saffron">
-          Coming Soon
+          Now Open
         </h2>
         <p className="font-script text-3xl text-forest mt-2">in Windsor, Ontario</p>
         <GoldDivider label="❖" />
@@ -623,7 +623,7 @@ function Visit() {
 
 
         <p className="mt-12 text-sm text-muted-foreground">
-          Opening soon — follow us on Instagram for first looks, menu reveals, and our launch date.
+          Now open and serving — follow us on Instagram for daily specials, behind-the-scenes moments, and the latest dishes.
         </p>
 
       </div>
