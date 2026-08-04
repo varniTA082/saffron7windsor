@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Saffron 7 — Indian · Italian · Fusion · Windsor" },
-      { name: "description", content: "Saffron 7 — Indian, Italian and fusion cuisine coming soon to Windsor, Ontario." },
+      { name: "description", content: "Saffron 7 — Indian, Italian and fusion cuisine now open and serving in Windsor, Ontario." },
       { property: "og:site_name", content: "Saffron 7" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
