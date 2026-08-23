@@ -34,7 +34,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import saffronLogo from "@/assets/saffron7-logo.png";
-import saffronLogoJpeg from "@/assets/saffron7-logo.jpeg.asset.json";
+// import saffronLogoJpeg from "@/assets/saffron7-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -396,23 +396,23 @@ function Experience() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-4">
             <a
-              href="#"
+              href="https://www.ubereats.com/store/saffron7-university-ave-w/skVkQ_itQF6GwJdn4PSRxQ"
               aria-label="Order on Uber Eats"
               className="px-7 py-4 rounded-full bg-black hover:opacity-90 transition shadow-soft inline-flex items-center"
             >
               <span className="text-white font-bold text-xl tracking-tight">Uber </span>
               <span className="text-[#06C167] font-bold text-xl tracking-tight">Eats</span>
             </a>
-            <a
+            {/* <a
               href="#"
               aria-label="Order on SkipTheDishes"
               className="px-7 py-4 rounded-full bg-[#FF8000] hover:opacity-90 transition shadow-soft inline-flex items-center"
             >
               <span className="text-white font-extrabold text-xl tracking-tight italic">Skip</span>
               <span className="text-white font-light text-xl tracking-tight italic">TheDishes</span>
-            </a>
+            </a> */}
             <a
-              href="#"
+              href="https://www.doordash.com/store/47513353?utm_source=mx_share&aw=ItKsGG_CRw3UaKGz"
               aria-label="Order on DoorDash"
               className="px-7 py-4 rounded-full bg-[#EB1700] hover:opacity-90 transition shadow-soft inline-flex items-center gap-2"
             >
@@ -428,33 +428,6 @@ function Experience() {
     </section>
   );
 }
-
-const reviews = [
-  {
-    name: "Priya S.",
-    rating: 5,
-    text: "Truffle fettuccine followed by butter chicken? I didn't know I needed it. Service was warm, the room felt like home.",
-    when: "a week ago",
-  },
-  {
-    name: "Marco D.",
-    rating: 5,
-    text: "Finally a place in Windsor doing fusion properly. The tikka paneer skewers are unreal. Coming back this weekend.",
-    when: "2 weeks ago",
-  },
-  {
-    name: "Anita K.",
-    rating: 5,
-    text: "Got delivery via Uber Eats — packaging was beautiful and the food still piping hot. Tiramisu is a must.",
-    when: "3 weeks ago",
-  },
-  {
-    name: "Jordan M.",
-    rating: 4,
-    text: "Cozy spot with a great vibe. Generous portions and lovely staff. Will be telling friends.",
-    when: "a month ago",
-  },
-];
 
 function Stars({ n }: { n: number }) {
   return (
@@ -474,9 +447,8 @@ function Reviews() {
     retry: false,
   });
 
-  const live = data?.reviews?.length ? data.reviews : null;
-  const items: GoogleReview[] = live ?? reviews;
-  const rating = data?.rating ?? 4.9;
+  const items: GoogleReview[] = data?.reviews ?? [];
+  const rating = data?.rating;
   const mapsUri =
     data?.mapsUri ??
     "https://www.google.com/maps/search/?api=1&query=Saffron+7+1457+University+Ave+West+Windsor+ON";
@@ -490,21 +462,30 @@ function Reviews() {
             From Our Google Reviews
           </h2>
           <GoldDivider />
-          <div className="flex items-center justify-center gap-3 mt-4">
-            <span className="font-display text-4xl text-saffron">{rating.toFixed(1)}</span>
-            <div>
-              <Stars n={Math.round(rating)} />
-              <p className="text-xs text-muted-foreground">
-                {live && data?.total
-                  ? `Based on ${data.total} Google reviews`
-                  : "Based on early guest feedback"}
-              </p>
+          {rating ? (
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <span className="font-display text-4xl text-saffron">
+                {rating.toFixed(1)}
+              </span>
+              <div>
+                <Stars n={Math.round(rating)} />
+                <p className="text-xs text-muted-foreground">
+                  {data?.total
+                    ? `Based on ${data.total} Google reviews`
+                    : "Google rating"}
+                </p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <p className="mt-4 text-sm text-muted-foreground">
+              Read verified guest feedback on our Google listing.
+            </p>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.slice(0, 4).map((r) => (
+        {items.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {items.slice(0, 4).map((r) => (
             <article
               key={`${r.name}-${r.when}`}
               className="bg-card p-6 rounded-md shadow-soft border border-border flex flex-col"
@@ -541,8 +522,9 @@ function Reviews() {
                 Posted on Google
               </div>
             </article>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         <div className="text-center mt-12">
           <a
@@ -636,7 +618,7 @@ function Footer() {
     <footer className="bg-forest text-cream/90 py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
         <div>
-          <Logo size="md" src={saffronLogoJpeg.url} />
+          {/* <Logo size="md" src={saffronLogoJpeg.url} /> */}  <Logo size="md" src={saffronLogo} />
           <p className="text-xs uppercase tracking-[0.3em] text-gold mt-2">
             Indian · Italian · Fusion
           </p>
